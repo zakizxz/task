@@ -8,6 +8,7 @@ package testproject;
 import MyLibrary.MapFunction;
 import MyLibrary.MyLibraryMethods;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -28,7 +29,7 @@ public class TestProject {
         int_list.add("dede");
         int_list.add("swww");
         int_list.add("aqwe");
-        
+//        
          ArrayList<Object> in_list = new ArrayList<>();
         in_list.add(1);
         in_list.add(2);
@@ -36,12 +37,19 @@ public class TestProject {
         in_list.add(4);
         in_list.add(5);
         
+        ArrayList<Object> integer_list = new ArrayList<>();
+        in_list.add(1);
+        in_list.add(2);
+        
         MapFunction ml = new MyLibraryMethods();
+        String operator = "*";
         System.out.println(custom_lib.map_method(ml,in_list));
         System.out.println(custom_lib.map_method(ml,int_list));
+        System.out.println(custom_lib.filter_method(ml,int_list));
         
-        
-//        System.out.println(custom_lib.map_method(ml,int_list));
+        System.out.println(custom_lib.reduce_method(ml, in_list, integer_list,operator));
+    
+        System.out.println(custom_lib.map_method(ml,int_list));
         
     }
     

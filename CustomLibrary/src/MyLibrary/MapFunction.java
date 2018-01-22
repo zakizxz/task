@@ -5,6 +5,8 @@
  */
 package MyLibrary;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author as
@@ -14,5 +16,11 @@ public interface MapFunction {
     int map(int input);
     
     String map(String input);
+
+    int filterOdd(int input);
+    
+    int reduce_sum(ArrayList<Object> input);
+    
+    int reduce_multiply(ArrayList<Object> input);
     
 }
